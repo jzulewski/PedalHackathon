@@ -21,8 +21,22 @@ class ViewController: UIViewController {
         
         tableView.delegate = self
         tableView.dataSource = self
+        
     }
-
+    
+    override func viewWillAppear(_ animated: Bool) {
+        
+        super.viewWillAppear(animated)
+        
+        //Changing the Styling of the Navigation Bar Title
+        let lblTitle = UILabel()
+        let titleAttribute: [NSAttributedString.Key: Any] = [.font: UIFont.boldSystemFont(ofSize: 30), .foregroundColor: UIColor.white]
+        lblTitle.attributedText = NSMutableAttributedString(string: "Pedal", attributes: titleAttribute)
+        lblTitle.sizeToFit()
+        navigationItem.titleView = lblTitle
+    }
+    
+    
 }
 
 extension ViewController: UITableViewDelegate, UITableViewDataSource {
