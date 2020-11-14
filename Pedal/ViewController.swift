@@ -14,6 +14,8 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
+    @IBOutlet weak var sortSegmentedControl: UISegmentedControl!
+    
     var spots = ["#Reading: Read 5 chapters today", "#Running", "#Building", "#Learning"]
     
     override func viewDidLoad() {
@@ -22,6 +24,19 @@ class ViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         
+        configureSegmentedControl()
+        
+    }
+    
+    func configureSegmentedControl() {
+        
+        let purpleFontColor = [NSAttributedString.Key.foregroundColor : UIColor(named: "Color")!]
+        let whiteFontColor = [NSAttributedString.Key.foregroundColor : UIColor.white]
+        sortSegmentedControl.setTitleTextAttributes(purpleFontColor, for: .selected)
+        sortSegmentedControl.setTitleTextAttributes(whiteFontColor, for: .normal)
+        
+        sortSegmentedControl.layer.borderColor = UIColor.white.cgColor
+        sortSegmentedControl.layer.borderWidth = 1.0
     }
     
     override func viewWillAppear(_ animated: Bool) {
