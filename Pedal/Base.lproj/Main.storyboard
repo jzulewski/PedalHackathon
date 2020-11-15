@@ -54,31 +54,65 @@
                         </constraints>
                     </view>
                     <toolbarItems>
-                        <barButtonItem style="plain" id="lW0-FD-sO7">
-                            <segmentedControl key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="Pjj-Ni-CpY">
-                                <rect key="frame" x="20" y="10.5" width="374" height="33"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" name="Color"/>
-                                <segments>
-                                    <segment title="Create"/>
-                                    <segment title="Feed"/>
-                                    <segment title="Profile"/>
-                                </segments>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <color key="selectedSegmentTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </segmentedControl>
+                        <barButtonItem title="Create" id="JRC-6u-WGR">
+                            <connections>
+                                <segue destination="mlq-jx-tKX" kind="show" id="EVF-t3-BPf"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="Ilb-uL-W2B"/>
+                        <barButtonItem title="Feed" id="8mt-bz-LQy">
+                            <connections>
+                                <segue destination="BYZ-38-t0r" kind="show" id="IiK-y1-mZ6"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="zxp-EK-gSv"/>
+                        <barButtonItem title="Profile" id="lhm-go-ajY">
+                            <connections>
+                                <segue destination="ZYc-hy-5RN" kind="show" id="VP2-UZ-249"/>
+                            </connections>
                         </barButtonItem>
                     </toolbarItems>
                     <navigationItem key="navigationItem" id="VLp-Rd-iaB"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics" translucent="NO"/>
                     <connections>
-                        <outlet property="sortSegmentedControl" destination="Pjj-Ni-CpY" id="Ngd-3r-CZK"/>
                         <outlet property="tableView" destination="TTk-mS-CVg" id="pEt-ZE-DCj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="713.04347826086962" y="73.660714285714278"/>
+        </scene>
+        <!--Profile View Controller-->
+        <scene sceneID="Ztw-MS-muB">
+            <objects>
+                <viewController title="Profile View Controller" id="ZYc-hy-5RN" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="lQX-PC-2h4">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="Zj1-Bf-YXh"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="gjc-Es-y23"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cEz-xU-QkP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1599" y="74"/>
+        </scene>
+        <!--Create View Controller-->
+        <scene sceneID="Ung-Fh-cp9">
+            <objects>
+                <viewController title="Create View Controller" id="mlq-jx-tKX" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="HvW-qa-XJ7">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="B90-Oh-a6n"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="k0V-vA-ZZn"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SeW-3S-VMs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="683" y="909"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="bkV-DG-ODR">
@@ -108,7 +142,7 @@
     </scenes>
     <resources>
         <namedColor name="Color">
-            <color red="0.73000001907348633" green="0.69199997186660767" blue="0.81199997663497925" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <color red="0.73005408049999998" green="0.69161087269999999" blue="0.81177949910000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
